@@ -1,0 +1,49 @@
+/* smarthone/general screen */
+body {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#small {
+    display: block;
+    font-size: 1.2rem;
+    flex: 1;
+}
+#medium {
+    display: block;
+    font-size: 1.2rem;
+    flex: 1;
+}
+#large {
+    display: block;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+/* tablets screen */
+@media (min-width: 480px) {
+    body {
+        background-color: green;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #small { flex: 2; }       
+    #medium { flex: 1; }     
+    #large { flex: 1 0 100%; } 
+}
+
+/* computer screen */
+@media (min-width: 1024px) {
+    body {
+        background-color: blue;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #small { flex: 1; }
+    #medium { flex: 1; }
+    #large { flex: 1; }
+}
